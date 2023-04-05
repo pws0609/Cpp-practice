@@ -1,0 +1,5 @@
+230405
+1,3 sol.	temp->a (temp가 가리키는 a)
+	temp.a (temp의 a)
+2.
+3. 
