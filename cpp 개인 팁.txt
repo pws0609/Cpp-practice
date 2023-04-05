@@ -1,5 +1,5 @@
 230405
 1,3 sol.	temp->a (temp가 가리키는 a)
 	temp.a (temp의 a)
-2.
-3. 
+2 sol.	array 값은 포인터 형식으로 함수로 넘겨서 그냥 바꾸면 된다.
+	array 자체가 주소값이기 때문.
