@@ -19,7 +19,7 @@ int main() {
 
 	for (int i = 0; i < a; i++) {
 		cout << i << " 당신의 이름을 입력하세요\n";
-		cin >> (temp + i)->name;
+		cin >> (*(temp + i)).name;
 
 		cout << i << " 당신의 나이를 입력하세요\n";
 		cin >> (temp + i)->age;
