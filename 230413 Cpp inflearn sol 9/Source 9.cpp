@@ -5,7 +5,8 @@ int findmedicine(int a);
 int main() {
 	int N = 0;
 	cin >> N;
-	for (int i = 1; i < N; i++) {
+	cout << 1 << " ";
+	for (int i = 2; i < N; i++) {
 		cout << findmedicine(i) << " ";
 	}
 	cout << findmedicine(N);
@@ -14,11 +15,11 @@ int main() {
 
 int findmedicine(int a) {
 	int res = 0;
-	for (int i = 0; i < sqrt(a); i++)
+	for (int i = 1; i < sqrt(a); i++)
 		if (a % i == 0)
 			res++;
 	res *= 2;
 	if (sqrt(a) - (int)sqrt(a) == 0)
-		res--;
+		res++;
 	return res;
 }
