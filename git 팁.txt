@@ -1,0 +1,6 @@
+git init: 깃 최초 실행
+git clone "url": 깃 받아오기
+git branch -m master main: master에서 main으로 바꾸기
+git add .
+git commit -m "message"
+git push -u origin main
