@@ -3,7 +3,8 @@ using namespace std;
 int digit_sum(int x);
 int main() {
 	int num;
-	int tmp=0;
+	int tmp = 0;
+	int tmp2 = 0;
 	int res = 0;
 	cin >> num;
 	int* numarr=new int[num];
@@ -12,9 +13,13 @@ int main() {
 	}
 	for(int i = 0; i<num; i++){
 		tmp = digit_sum(numarr[i]);
-		cout << tmp<<endl;
-		if(res <= tmp){
-			res = i;
+		if(tmp2 < tmp){
+			tmp2 = tmp;
+			res = numarr[i];
+		}
+		else if(tmp2 == tmp){
+			if(res < numarr[i])
+				res = numarr[i];
 		}
 	}
 	cout<<res;
