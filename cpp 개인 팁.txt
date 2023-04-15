@@ -24,3 +24,6 @@
 230412
 7 sol.	공백 입력받기: getline(cin, "string") <- 공백 포함 문자열
 			cin.getline("string","len",'?') <- ? 입력시 입력 종료
+
+230415
+14 sol.★★	1은 소수가 아니다
