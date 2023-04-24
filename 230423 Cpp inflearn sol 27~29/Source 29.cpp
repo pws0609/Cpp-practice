@@ -2,9 +2,9 @@
 using namespace std;
 int main() {
 	int N;
-	int cnt = 0;
+	long long int cnt = 0;
 	cin >> N;
-	for(int i = 0; i<N; i++){
+	for(int i = 1; i<=N; i++){
 		int tmp = i;
 		while(tmp>0){
 			if(tmp % 10 == 3){
