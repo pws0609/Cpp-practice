@@ -8,8 +8,10 @@ int main() {
 	cin >> N;
 	tmp = N;
 	while (tmp > 0) {
-		if (tmp % 10 >= 3)
+		if (tmp % 10 > 3)
 			cnt += (tmp / 10 + 1) * decimal;
+		else if (tmp % 10 = 3)
+			cnt += (tmp/10*decimal)+(N-tmp+1);
 		else
 			cnt += tmp / 10 * decimal;
 		tmp /= 10;
