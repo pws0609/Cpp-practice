@@ -20,8 +20,8 @@ int main() {
 	arr2.push_back(arr[1] - arr[0]);
 	for (int i = 1; i < N - 1; i++)
 		arr2.push_back(arr[i + 1] - arr[i]);
-	int* sumarr = new int[arr2.size()];
-	int* resarr = new int[arr2.size()];
+	int* sumarr = new int[arr2.size()]();
+	int* resarr = new int[arr2.size()]();
 
 	int rt = arr[N - 1];
 	int lt = arr[0];
@@ -49,8 +49,14 @@ int main() {
 		}
 	}
 
-	//for (int i = 0; i < sumarr.size(); i++)
-	//	cout << sumarr[i]<<" ";
+	int answer = 1000000000;
+	for (int i = 0; i < arr2.size(); i++) {
+		if (resarr[i] == 0)
+			continue;
+		if (resarr[i] < answer)
+			answer = resarr[i];
+	}
+	cout << answer;
 
 	return 0;
 }
