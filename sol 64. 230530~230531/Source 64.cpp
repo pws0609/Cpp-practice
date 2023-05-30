@@ -3,10 +3,13 @@ using namespace std;
 void DFS(int a);
 int N, M, cnt = 0;
 int** graph;
+//방문 여부 판별
+int* chk;
 int** arr;
 int main(){
 	cin >> N >> M;
 	graph = new int* [N];
+	chk = new int[N]();
 	for (int i = 0; i < N; i++)
 		graph[i] = new int[N]();
 	arr = new int* [M];
@@ -16,25 +19,23 @@ int main(){
 			cin >> arr[i][j];
 	}
 	for (int i = 0; i < M; i++) {
-		graph[arr[i][0]][arr[i][1]] = 1;
+		graph[arr[i][0] - 1][arr[i][1] - 1] = 1;
 	}
-	DFS(1);
+	chk[0] = 1;
+	DFS(0);
 	cout << cnt;
 	return 0;
 }
 
 void DFS(int a) {
-	if (a == 5) {
+	if (a == N - 1)
 		cnt++;
-		return;
-	}
 	else {
 		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (graph[i][j] != 0) {
-					graph[i][j] = 0;
-					DFS(j);
-				}
+			if (graph[a][i] == 1 && chk[i] == 0) {
+				chk[i] = 1;
+				DFS(i);
+				chk[i] = 0;
 			}
 		}
 	}
