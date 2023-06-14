@@ -11,11 +11,11 @@ int main() {
 		if (a == 0) {
 			if (pQ.empty())
 				cout << -1;
-			cout << pQ.top() << '\n';
+			cout << -1 * pQ.top() << '\n';
 			pQ.pop();
 		}
 		else {
-			pQ.push(a);
+			pQ.push(-a);
 		}
 	}
 }
