@@ -16,5 +16,6 @@ int DFS(int n, int r) {
 		return n;
 	if (n - r == 1)
 		return n;
+	//메모이제이션(데이터 쌓아놓고 바로 불러오기)
 	return dy[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);
 }
