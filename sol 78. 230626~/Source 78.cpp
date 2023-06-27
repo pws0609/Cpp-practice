@@ -15,7 +15,7 @@ void Union(int a, int b) {
 }
 int main() {
 	int V, E, a, b, c;
-	cin >> V >> E;
+	cin >> V >> E; 
 	for (int i = 0; i < 1001; i++)
 		unf[i] = i;
 	for (int i = 0; i < E; i++) {
