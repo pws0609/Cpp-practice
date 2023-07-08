@@ -14,7 +14,7 @@ int main() {
 		tot *= (N - i);
 	}
 	while (R > 0) {
-		for (int i = 0; i < R+1; i++) {
+		for (int i = 0; i < R+1; i++) { 
 
 		}
 	}
