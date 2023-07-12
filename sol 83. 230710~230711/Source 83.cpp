@@ -35,20 +35,20 @@ void DFS(int x) {
 	if (x == TOT.length() + 1) {
 		if (Cnum() == Anum() + Bnum()) {
 			cnt++;
-			//			cnt = 1;	
+//			cnt = 1;
 		}
 	}
 	else {
-		//		if (cnt == 0) {		
+//		if (cnt == 0) {
 		for (int i = 0; i < 10; i++) {
 			if (chk[i] == 0) {
-
-
-
-
+				totnum[x - 1] = i;
+				chk[i] = 1;
+				DFS(x + 1);
+				chk[i] = 0;
 			}
 		}
-		//		}		
+//		}
 	}
 }
 
@@ -88,4 +88,5 @@ int Cnum() {
 		res += totnum[j] * pow(10, C.length() - i - 1);
 		i++;
 	}
+	return res;
 }
