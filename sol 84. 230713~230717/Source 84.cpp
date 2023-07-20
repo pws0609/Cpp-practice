@@ -17,7 +17,7 @@ int main() {
 	cout << res;
 }
 
-void DFS(int a, int tmp) {
+void DFS(int a, int tmp) { 
 	if (a == N + 1) {
 		if (res < tmp) {
 			res = tmp;
